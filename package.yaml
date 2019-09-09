@@ -1,0 +1,41 @@
+name: lira
+version: "0.1"
+category: Language
+
+library:
+  source-dirs: src
+  dependencies:
+    - base >= 4.9.1.0
+    - mtl
+    - parsec
+    - text
+    - bytestring >= 0.10.8.1
+    - containers >= 0.5.7.1
+    - cryptonite >= 0.21
+    - aeson >= 1.0.2.1
+    - split >= 0.2.3.1
+    - directory >= 1.3.0.0
+
+executables:
+  lira: &lira
+    main: src/Main.hs
+    dependencies:
+      - lira
+      - base >= 4.9.1.0
+      - aeson >= 1.0.2.1
+      - bytestring >= 0.10.8.1
+      - split >= 0.2.3.1
+      - directory >= 1.3.0.0
+
+tests:
+  unit:
+    source-dirs: unittests
+    main: main_tests.hs
+    dependencies:
+      - lira
+      - base >= 4.9.1.0
+      - HUnit
+      - QuickCheck
+      - containers
+      - hspec
+      - mtl
