@@ -208,7 +208,7 @@ saveTimestampToStorage =
 -- Given a number of transfercalls, set executed word in storage
 -- A setMemExpWord is not needed since that word is initialized to zero automatically
 setExecutedWord :: [TransferCall] -> [EvmOpcode]
-setExecutedWord [] = undefined
+setExecutedWord [] = []
 setExecutedWord tcs =
   [push $ 2 ^ length tcs - 1, push $ storageAddress Executed, SSTORE]
 
