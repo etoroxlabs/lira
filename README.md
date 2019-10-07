@@ -102,7 +102,7 @@ time unit:
 u ::= seconds | minutes | hours | days | weeks
 
 operators:
-op ::= + | - | x | / | = | if | or | and
+op ::= + | - | x | / | = | if | or | and | min | max
 uop ::=  not
 
 operator types:
@@ -196,7 +196,7 @@ $ stack install
 2. You can now compile one of the examples by executing the following
 ```
 $ mkdir build
-$ lira -o build examples/BettingExample0.bahr
+$ lira -o build examples/BettingExample0.lir
 ```
 Remember to change the placement addresses in the examples with real ones.
 
