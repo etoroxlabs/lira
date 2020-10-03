@@ -1,0 +1,51 @@
+name:        lira
+version:     0.2.0
+
+synopsis:    'Declarative financial contract language'
+description: 'Lira is a declarative domain-specific language designed to be the backbone of financial contracts that can be executed on the blockchain'
+category:    Ethereum, Finance, Network, Language
+license:     MIT
+
+homepage:    https://github.com/etoroxlabs/lira
+author:      Thorkil Vaerge, Mads Gram, Simon Shine, Peter Emil Jensen
+maintainer:  shreddedglory@gmail.com
+copyright:   2020 eToroX Labs
+
+dependencies:
+  - base
+  - mtl
+  - parsec
+  - text
+  - bytestring
+  - containers
+  - cryptonite
+  - aeson
+  - split
+  - directory
+  - evm-opcodes
+  - optparse-applicative
+  - filepath
+  - megaparsec
+  - parser-combinators
+  - prettyprinter
+
+library:
+  source-dirs: src
+
+executables:
+  lirac: &lirac
+    main: src/Main.hs
+    dependencies:
+      - lira
+
+tests:
+  default:
+    source-dirs: test
+    main: main_tests.hs
+    dependencies:
+      - lira
+      - HUnit
+      - hedgehog
+      - hspec
+      - hspec-hedgehog
+      - hspec-megaparsec

@@ -1,0 +1,6 @@
+resolver: lts-16.11
+packages:
+  - .
+extra-deps:
+  - git: https://github.com/sshine/hs-evm-opcodes.git
+    commit: b60348b4f4d8e548f5f2debbe498371b2a3f307c
