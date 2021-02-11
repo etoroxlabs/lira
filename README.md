@@ -171,6 +171,8 @@ expr ::=
     'true'
   | 'false'
   | expr binop expr
+  | 'max(' expr ',' expr ')'
+  | 'min(' expr ',' expr ')'
   | unop expr
   | 'obs(' obsType ',' obsAddress ',' obsKey ')'
   | ['0'-'9']+
@@ -179,7 +181,7 @@ time ::= 'now' | ['0'-'9']+ timeUnit
 
 timeUnit ::= 'seconds' | 'minutes' | 'hours' | 'days' | 'weeks'
 
-binop ::= '+' | '-' | 'x' | '/' | '=' | 'or' | 'and' | 'min' | 'max'
+binop ::= '+' | '-' | 'x' | '/' | '=' | 'or' | 'and'
 
 unop ::= 'not'
 
