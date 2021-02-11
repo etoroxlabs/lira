@@ -171,6 +171,8 @@ expr ::=
     'true'
   | 'false'
   | expr binop expr
+  | 'max(' expr ',' expr ')'
+  | 'min(' expr ',' expr ')'
   | unop expr
   | 'obs(' obsType ',' obsAddress ',' obsKey ')'
   | ['0'-'9']+
