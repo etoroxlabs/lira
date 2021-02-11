@@ -181,7 +181,7 @@ time ::= 'now' | ['0'-'9']+ timeUnit
 
 timeUnit ::= 'seconds' | 'minutes' | 'hours' | 'days' | 'weeks'
 
-binop ::= '+' | '-' | 'x' | '/' | '=' | 'or' | 'and' | 'min' | 'max'
+binop ::= '+' | '-' | 'x' | '/' | '=' | 'or' | 'and'
 
 unop ::= 'not'
 
